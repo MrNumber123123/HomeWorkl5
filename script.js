@@ -21,10 +21,26 @@ passwordInput.type = 'password'
 ConfirmPasswordInput.type = 'password'
 }
 })
-let validatio =  new JustValidate('#form');
+let validation2 =  new JustValidate('#form');
 validation.addField('#email', [
     {
         rule: 'required',
         errorMessage: 'Please enter your email',
+    },
+])
+let validation3 =  new JustValidate('#form');
+validation.addField('#password', [
+    {
+        rule: 'required',
+        value: '6',
+        errorMessage: 'Minimum number of characters 6',
+    },
+])
+let validation4 =  new JustValidate('#form');
+validation.addField('#confirmPassword', [
+    {
+        rule: 'required',
+        value: '6',
+        errorMessage: 'Repeat password',
     },
 ])
